@@ -1,0 +1,23 @@
+.feedback__form {
+  display: grid;
+  grid-template-columns: repeat(4, /*4 рази*/ 1fr /*по 1 колонці*/);
+  gap: 30px;
+  align-items: center;
+
+  @include mediaTablet {
+    grid-template-columns: 1fr;
+  }
+}
+.feedback__title {
+  margin-bottom: 38px;
+  @include mediaTablet {
+    margin-bottom: 19px;
+  }
+}
+
+.feedback {
+  margin-bottom: 191px;
+  @include mediaTablet {
+    padding: 0px;
+  }
+}

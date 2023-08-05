@@ -1,0 +1,39 @@
+.info {
+  position: relative;
+  color: $text-white;
+  text-align: center;
+  font-size: 18px;
+  font-family: $font-main;
+  &--map,
+  &--tel {
+    padding-left: 35px;
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      width: 21px;
+      height: 21px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translate(0%, -50%);
+    }
+  }
+
+  &--map::before {
+    background-image: url("../../img/header/placeholder.svg");
+  }
+  &--tel::before {
+    background-image: url("../../img/header/phone-call.svg");
+  }
+
+  @include mediaTablet {
+    font-size: 14px;
+
+    &--tel {
+      padding-left: 26px;
+    }
+  }
+}

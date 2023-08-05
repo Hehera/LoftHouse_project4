@@ -1,0 +1,29 @@
+.appartments {
+  position: relative;
+
+  &::before {
+    content: "III";
+    right: calc(50% + 110px);
+    transform: translate(-50%, 0%);
+    line-height: 1;
+
+    @include decorNumber;
+  }
+}
+
+.apartments__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fitm minmax 290px);
+  gap: 30px;
+
+  @include mediaTablet {
+    grid-template-columns: repeat(auto-fitm minmax 290px);
+  }
+
+  @include miniPhone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

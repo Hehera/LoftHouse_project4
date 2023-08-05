@@ -1,0 +1,60 @@
+.cta__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px /*відступ між рядками*/ 35px /*відступ між колонками*/;
+
+  @include mediaTablet {
+    grid-template-columns: 1fr;
+  }
+}
+.form__input {
+  height: 50px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: $font-accent;
+  font-size: 14px;
+  font-family: $font-main;
+  transition: background-color 0.2s ease-in;
+  &::placeholder {
+    color: $placeholder;
+    // У веб-розробці placeholder – це атрибукт HTML, який використовується для вказівки підказки користувачеві про те, що потрібно ввести в текстове поле. Він відображається текстом, поки користувач не почне вводити текст у поле.
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+.form__privacy {
+  width: 255px;
+  color: $gray;
+  text-align: center;
+  font-family: $font-main;
+  font-size: 13px;
+  line-height: 16px; /* 123.077% */
+
+  @include mediaTablet {
+    grid-row: 4/5;
+    margin: 0 auto;
+  }
+}
+.form__btn {
+  padding: 12px;
+  font-size: 16px;
+  color: $text-white;
+  text-align: center;
+  background-color: $accent;
+  font-family: $font-main;
+
+  font-weight: 700;
+  line-height: 27px; /* 168.75% */
+  transition: background-color 0.2s ease-in;
+  &:hover {
+    background-color: saturate($accent, 10%);
+  }
+}
+// .form-privacy--bottom {
+//   @include mediaTablet {
+//     grid-row: 4/5; //поміняти місцями елемент
+//   }
+// }
